@@ -1,19 +1,72 @@
 //
 //  AppDelegate.m
-//  Dollarss
+//  Test-XMPP
 //
-//  Created by 秦 道平 on 14-4-12.
+//  Created by 秦 道平 on 14-3-25.
 //  Copyright (c) 2014年 秦 道平. All rights reserved.
 //
 
 #import "AppDelegate.h"
+#import "XMPPFramework.h"
+#import "RosterViewController.h"
+#import "ChatRoomListViewController.h"
+#import "ProfileViewController.h"
+#import "RootTabViewController.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    ///log
+    [DDLog addLogger:[DDASLLogger sharedInstance]];
+    [DDLog addLogger:[DDTTYLogger sharedInstance]];
+    _fileLogger=[[DDFileLogger alloc]init];
+    _fileLogger.rollingFrequency=60*60*24;
+    _fileLogger.logFileManager.maximumNumberOfLogFiles = 3;
+    [DDLog addLogger:_fileLogger];
+    ///
+    self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
+    
+//    _viewController=[[ViewController alloc]init];
+//    UINavigationController* navigation=[[[UINavigationController alloc]initWithRootViewController:_viewController] autorelease];
+//    self.window.rootViewController=navigation;
+    
+    RosterViewController* rosterViewController=[[[RosterViewController alloc]initWithStyle:UITableViewStylePlain] autorelease];
+    UINavigationController* navigationRoster=[[[UINavigationController alloc]initWithRootViewController:rosterViewController] autorelease];
+    navigationRoster.tabBarItem.title=@"好友";
+    navigationRoster.tabBarItem.image=[UIImage imageNamed:@"chat"];
+    
+    //UIViewController* chatRoomViewController=[[[UIViewController alloc]init] autorelease];
+    ChatRoomListViewController* chatRoomViewController=[[ChatRoomListViewController alloc]init];
+    UINavigationController* navigationChatRoom=[[[UINavigationController alloc]initWithRootViewController:chatRoomViewController] autorelease];
+    navigationChatRoom.tabBarItem.title=@"群组";
+    navigationChatRoom.tabBarItem.image=[UIImage imageNamed:@"groupchat"];
+    
+    ProfileViewController* profileViewController=[[[ProfileViewController alloc]initWithStyle:UITableViewStyleGrouped] autorelease];
+    UINavigationController* navigationProfile=[[[UINavigationController alloc]initWithRootViewController:profileViewController] autorelease];
+    navigationProfile.tabBarItem.title=@"我的";
+    navigationProfile.tabBarItem.image=[UIImage imageNamed:@"profile"];
+    
+    NSArray* viewControllers=@[navigationRoster,navigationChatRoom,navigationProfile,];
+    
+    RootTabViewController* rootController=[[[RootTabViewController alloc]init] autorelease];
+    rootController.view.backgroundColor=[UIColor whiteColor];
+    rootController.viewControllers=viewControllers;
+    rootController.selectedIndex=0;
+    self.window.rootViewController=rootController;
+    [self.window makeKeyAndVisible];
     return YES;
+}
+
+-(void)dealloc{
+    [_fileLogger release];
+    [_viewController release];
+    [super dealloc];
+}
+
+-(DDFileLogger*)fileLogger{
+    return _fileLogger;
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application
