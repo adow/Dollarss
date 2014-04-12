@@ -41,7 +41,6 @@
         _usernameText.placeholder=@"用户名";
         _usernameText.keyboardType=UIKeyboardTypeEmailAddress;
         [self.view addSubview:_usernameText];
-//        _usernameText.text=@"adow";
         _usernameText.text=[[NSUserDefaults standardUserDefaults] stringForKey:Username_Key];
     }
     if (!_passwordText){
@@ -50,7 +49,6 @@
         _passwordText.secureTextEntry=YES;
         _passwordText.placeholder=@"密码";
         [self.view addSubview:_passwordText];
-        _passwordText.text=@"cloudq";
         _passwordText.text=[[NSUserDefaults standardUserDefaults] stringForKey:Password_Key];
     }
     if (!_hostText){
@@ -59,7 +57,6 @@
         _hostText.placeholder=@"服务器";
         _hostText.keyboardType=UIKeyboardTypeEmailAddress;
         [self.view addSubview:_hostText];
-//        _hostText.text=@"222.191.249.155";
         NSString* host=[[NSUserDefaults standardUserDefaults] stringForKey:Host_Key];
         if (!host){
             _hostText.text=@"222.191.249.155";
