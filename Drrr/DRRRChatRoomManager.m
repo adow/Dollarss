@@ -8,7 +8,7 @@
 
 #import "DRRRChatRoomManager.h"
 #import "DRRRManager.h"
-#import "XMPPPresence+DRRR.h"
+#import "XMPP+DRRR.h"
 #pragma mark - DRRRChatRoomMember
 @implementation DRRRChatRoomMember
 -(void)dealloc{

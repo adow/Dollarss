@@ -8,7 +8,7 @@
 #import "DRRRMessage.h"
 #import "DRRRRoster.h"
 #import "DRRRManager.h"
-#import "XMPPPresence+DRRR.h"
+#import "XMPP+DRRR.h"
 @implementation DRRRMessageContent
 -(NSString*)talkid{
     return self.fromJid;

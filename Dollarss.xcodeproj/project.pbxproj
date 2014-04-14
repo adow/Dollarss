@@ -63,7 +63,7 @@
 		68B3E04518F994770034E5DE /* DRRRManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 68B3E03D18F994770034E5DE /* DRRRManager.m */; };
 		68B3E04618F994770034E5DE /* DRRRMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 68B3E03F18F994770034E5DE /* DRRRMessage.m */; };
 		68B3E04718F994770034E5DE /* DRRRRoster.m in Sources */ = {isa = PBXBuildFile; fileRef = 68B3E04118F994770034E5DE /* DRRRRoster.m */; };
-		68B3E04818F994770034E5DE /* XMPPPresence+DRRR.m in Sources */ = {isa = PBXBuildFile; fileRef = 68B3E04318F994770034E5DE /* XMPPPresence+DRRR.m */; };
+		68B3E04818F994770034E5DE /* XMPP+DRRR.m in Sources */ = {isa = PBXBuildFile; fileRef = 68B3E04318F994770034E5DE /* XMPP+DRRR.m */; };
 		68B3E06B18F996590034E5DE /* ChatTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 68B3E04F18F996590034E5DE /* ChatTableViewCell.m */; };
 		68B3E06C18F996590034E5DE /* ChatTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68B3E05118F996590034E5DE /* ChatTableViewController.m */; };
 		68B3E06D18F996590034E5DE /* ChatRoomListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68B3E05418F996590034E5DE /* ChatRoomListViewController.m */; };
@@ -193,8 +193,8 @@
 		68B3E03F18F994770034E5DE /* DRRRMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRRRMessage.m; sourceTree = "<group>"; };
 		68B3E04018F994770034E5DE /* DRRRRoster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRRRRoster.h; sourceTree = "<group>"; };
 		68B3E04118F994770034E5DE /* DRRRRoster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRRRRoster.m; sourceTree = "<group>"; };
-		68B3E04218F994770034E5DE /* XMPPPresence+DRRR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XMPPPresence+DRRR.h"; sourceTree = "<group>"; };
-		68B3E04318F994770034E5DE /* XMPPPresence+DRRR.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XMPPPresence+DRRR.m"; sourceTree = "<group>"; };
+		68B3E04218F994770034E5DE /* XMPP+DRRR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XMPP+DRRR.h"; sourceTree = "<group>"; };
+		68B3E04318F994770034E5DE /* XMPP+DRRR.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XMPP+DRRR.m"; sourceTree = "<group>"; };
 		68B3E04E18F996590034E5DE /* ChatTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatTableViewCell.h; sourceTree = "<group>"; };
 		68B3E04F18F996590034E5DE /* ChatTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatTableViewCell.m; sourceTree = "<group>"; };
 		68B3E05018F996590034E5DE /* ChatTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatTableViewController.h; sourceTree = "<group>"; };
@@ -580,8 +580,8 @@
 				68B3E03F18F994770034E5DE /* DRRRMessage.m */,
 				68B3E04018F994770034E5DE /* DRRRRoster.h */,
 				68B3E04118F994770034E5DE /* DRRRRoster.m */,
-				68B3E04218F994770034E5DE /* XMPPPresence+DRRR.h */,
-				68B3E04318F994770034E5DE /* XMPPPresence+DRRR.m */,
+				68B3E04218F994770034E5DE /* XMPP+DRRR.h */,
+				68B3E04318F994770034E5DE /* XMPP+DRRR.m */,
 			);
 			path = Drrr;
 			sourceTree = "<group>";
@@ -737,7 +737,7 @@
 				68B3E01A18F993390034E5DE /* XMPPElement.m in Sources */,
 				68B3E03018F993390034E5DE /* DispatchQueueLogFormatter.m in Sources */,
 				68B3E07118F996590034E5DE /* ProfileViewController.m in Sources */,
-				68B3E04818F994770034E5DE /* XMPPPresence+DRRR.m in Sources */,
+				68B3E04818F994770034E5DE /* XMPP+DRRR.m in Sources */,
 				68B3E07018F996590034E5DE /* RootTabViewController.m in Sources */,
 				68B3E01518F993390034E5DE /* XMPPXFacebookPlatformAuthentication.m in Sources */,
 				68B3E06D18F996590034E5DE /* ChatRoomListViewController.m in Sources */,
@@ -935,6 +935,7 @@
 				68B3DF9818F991DE0034E5DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

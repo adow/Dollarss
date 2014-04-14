@@ -13,6 +13,7 @@
 #define DRRRRosterMemberPresenceShowAway @"away" ///离开
 #define DRRRRosterMemberPresenceShowDnd @"dnd" ///请勿打扰
 #define DRRRRosterUpdateNotification @"DRRRRosterUpdateNotification" ///更新联系人列表时通知
+///一个联系人
 @interface DRRRRosterMember:NSObject{
     
 }
@@ -33,6 +34,7 @@
 -(id)initWithRosterElement:(NSXMLElement*)element;
 @end
 #pragma mark - DRRRRoster
+///联系人列表
 @interface DRRRRoster : NSObject<XMPPStreamDelegate>{
     
 }

@@ -1,5 +1,5 @@
 //
-//  XMPPPresence+DRRR.h
+//  XMPP+DRRR.h
 //  Test-XMPP
 //
 //  Created by 秦 道平 on 14-4-7.

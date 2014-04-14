@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "XMPP.h"
 #pragma mark - DRRRChatRoomMember
+///聊天室的一个成员
 @interface DRRRChatRoomMember : NSObject{
 
 }
@@ -24,6 +25,7 @@
 -(id)initWithPresence:(XMPPPresence*)presence;
 @end
 #pragma mark - DRRRChatRoomInfoField
+///聊天室房间信息的各个字段
 @interface DRRRChatRoomInfoField:NSObject{
     
 }
@@ -35,6 +37,7 @@
              value:(NSString*)value;
 @end
 #pragma mark - DRRRChatRoomInfo
+///聊天室房间信息
 @interface DRRRChatRoomInfo:NSObject{
     NSMutableArray* _features;
     NSMutableDictionary* _fields;
@@ -55,7 +58,7 @@
 @end
 #pragma mark - DRRRChatRoom
 #define DRRRChatRoomRefreshRoomsNotification @"DRRRChatRoomRefreshRoomsNotification" ///刷新房间列表时发出的通知
-///memberJid and info
+///聊天室房间
 @interface DRRRChatRoom : NSObject{
     NSMutableDictionary* _memberList;
 }
@@ -72,6 +75,7 @@
 -(DRRRChatRoomMember*)chatRoomMember:(NSString*)chatRoomMemberJid;
 @end
 #pragma mark - DRRRChatRoomManager
+///多人聊天室功能操作
 @interface DRRRChatRoomManager : NSObject<XMPPStreamDelegate>{
     NSMutableDictionary* _chatRooms;
     ///service 列表

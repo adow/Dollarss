@@ -31,8 +31,11 @@
 +(DRRRManager*)sharedManager;
 @property (nonatomic,readonly) XMPPStream* xmppStream;
 #pragma mark - action
+///登录
 -(void)signinWithUsername:(NSString*)username password:(NSString*)password host:(NSString*)host isregister:(BOOL)isregister;
+///自动登录
 -(void)autoSignin;
+///退出
 -(void)signout;
 #pragma mark subscribe
 #pragma mark - message

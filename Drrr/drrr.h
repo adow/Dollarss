@@ -13,5 +13,5 @@
 #import "DRRRMessage.h"
 #import "DRRRManager.h"
 #import "DRRRChatRoomManager.h"
-#import "XMPPPresence+DRRR.h"
+#import "XMPP+DRRR.h"
 #endif

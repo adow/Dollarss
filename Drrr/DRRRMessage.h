@@ -14,7 +14,7 @@
 #define DRRRRefreshTalksNotification_UserInfo_NewMessage @"new-message" ///userinfo 中的new-message
 #pragma mark - DRRRMessageContent
 /*
- 对应一条XMPP Message
+ 对应一条XMPP Message，每一条消息都是一个DRRRMessageContent
  来自一个联系人的chat 时
  
      <message xmlns="jabber:client" id="GixiF-64" to="adow@222.191.249.155" from="bdow@222.191.249.155/Spark 2.6.3" type="chat">
@@ -90,6 +90,8 @@
 -(instancetype)initWithXMPPMessage:(XMPPMessage*)message;
 @end
 #pragma mark - DRRRMessage
+///一个对话列表，里面是一个NSDictionary,和对话者的jid作为key,而他们的对话内容就是一个列表
+///messageBundle的key就是jid,而value就是一个NSArray,每一条消息内容是DRRRMessageContent
 @interface DRRRMessage : NSObject<XMPPStreamDelegate>{
     NSMutableDictionary* _messageBundle;
 }
@@ -99,7 +101,7 @@
 -(NSArray*)talksWithJid:(NSString*)jid;
 ///收到消息
 -(void)_receiveMessage:(DRRRMessageContent*)message;
-///发送消息
+///单人聊天，向好友发送消息
 -(DRRRMessageContent*)sendMessage:(NSString*)message
                             toJid:(NSString*)toJid
                            toName:(NSString*)toName;

@@ -6,7 +6,7 @@
 //  Copyright (c) 2014年 秦 道平. All rights reserved.
 //
 
-#import "XMPPPresence+DRRR.h"
+#import "XMPP+DRRR.h"
 #import "xmpp.h"
 @implementation XMPPPresence (DRRR)
 -(BOOL)isChatRoomPresence{

@@ -8,7 +8,7 @@
 
 #import "DRRRRoster.h"
 #import "DRRRManager.h"
-#import "XMPPPresence+DRRR.h"
+#import "XMPP+DRRR.h"
 #pragma mark - DRRRRosterMember
 @implementation DRRRRosterMember
 -(id)initWithPresence:(XMPPPresence *)presence{
