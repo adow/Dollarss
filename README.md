@@ -32,6 +32,7 @@ An Instant Message Client by XMPP on iPhone
 ## 项目依赖
 * XMPPFramework: 只使用了Core功能，extensions只使用了Reconnect;
 * 项目本身没有使用CoreData;
+* 不支持arc;
 
 ## Drrr
 包括几个主要的部分 
@@ -42,7 +43,7 @@ An Instant Message Client by XMPP on iPhone
 ### 消息:
 
 * `DRRRMessageContent`:一个消息的条目(Message)，对应XMPPMessage
-* DRRRMessage:整个消息列表，包括和每个联系人（聊天房间）的对话列表，DRRRMessage是一个单实例，通过[DRRRMessage sharedMessage]获取，他里面是一个messageBundle的NSDictionary,聊天者的jid就是key,value就是对话内容的列表，列表中是每一条消息，也就是DRRRMessageContent;接收到的好友邀请和房间邀请也是一个message content; 通过DRRRMessage 来发送消息。
+* `DRRRMessage`:整个消息列表，包括和每个联系人（聊天房间）的对话列表，DRRRMessage是一个单实例，通过[DRRRMessage sharedMessage]获取，他里面是一个messageBundle的NSDictionary,聊天者的jid就是key,value就是对话内容的列表，列表中是每一条消息，也就是DRRRMessageContent;接收到的好友邀请和房间邀请也是一个message content; 通过DRRRMessage 来发送消息。
 
 ### 联系人
 * `DRRRRoster`：是整个联系人列表，他是一个单实例，通过[DRRRRoster sharedRoster]获取。通过DRRRRoster来获取联系人信息，修改当前登录用户的状态，订阅和接受联系人邀请；
