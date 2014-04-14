@@ -22,8 +22,6 @@ An Instant Message Client by XMPP on iPhone
 ![群组](https://farm3.staticflickr.com/2818/13800802655_790c0154e9.jpg)
 
 ![状态](https://farm4.staticflickr.com/3680/13800821973_64182b21d9.jpg)
-![登录](https://farm3.staticflickr.com/2805/13800822253_10bf7ebed5.jpg)
-
 ![好友聊天](https://farm6.staticflickr.com/5116/13800802835_f98bedca6e.jpg)
 
 ## 目录结构

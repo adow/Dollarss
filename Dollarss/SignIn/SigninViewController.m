@@ -59,7 +59,7 @@
         [self.view addSubview:_hostText];
         NSString* host=[[NSUserDefaults standardUserDefaults] stringForKey:Host_Key];
         if (!host){
-            _hostText.text=@"222.191.249.155";
+            //_hostText.text=@"222.191.249.155";
         }
         else{
             _hostText.text=host;
