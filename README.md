@@ -17,6 +17,8 @@ An Instant Message Client by XMPP on iPhone
 * 房间内多人聊天;
 * 修改个人状态;
 
+**[演示视频](http://v.youku.com/v_show/id_XNzAwNTM3OTYw.html)** 
+
 
 ![群组聊天](https://farm8.staticflickr.com/7276/13801145794_ab25db30bd.jpg)
 ![群组](https://farm3.staticflickr.com/2818/13800802655_790c0154e9.jpg)
